@@ -1,15 +1,23 @@
-#game-board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
-.cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    font-size: 2rem;
-    cursor: pointer;
+.game-container {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd; /* Background color for game area */
+    position: relative;
+}
+
+.player {
+    width: 50px;
+    height: 50px;
+    background-color: blue; /* Player color */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Initial position of player */
+    transform: translateX(-50%);
 }
